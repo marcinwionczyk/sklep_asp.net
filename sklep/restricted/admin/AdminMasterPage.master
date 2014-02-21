@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="restricted_admin_AdminMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="../../css/header4_setup.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/layout1_setup.css" rel="stylesheet" type="text/css" />
+    <link href="../../css/layout1_text.css" rel="stylesheet" type="text/css" /> 
+    <title>Panel administratora</title>
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="page-container">
+    <!-- A. HEADER -->      
+    <div class="header">
+      
+      <!-- A.1 HEADER MIDDLE -->
+      <div class="header-middle">    
+   
+        <!-- Sitelogo and sitename
+        <a class="sitelogo" href="#" title="Go to Start page"></a>
+         -->
+        <div class="sitename">
+          <h1>ElSiKo</h1>
+          <h2>Elektronika, Sieci, Komputery</h2>
+        </div>
+      </div>
+      
+      <!-- A.2 HEADER BOTTOM -->
+      <div class="header-bottom">
+      
+        <!-- Navigation Level 2 (Drop-down menus) -->
+        <div class="nav2">
+	
+          <!-- Navigation item -->
+          <ul>
+            <li><a href="Default.aspx">Pracownicy</a></li>
+          </ul>
+          <ul>
+            <li><a href="Klienci.aspx">Klienci</a></li>
+          </ul>
+          <!-- Navigation item -->
+          
+
+          <!-- Navigation item -->
+        </div>
+        <div class="nav0">
+        <ul>
+        <li>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/restricted/admin/haslo.aspx">Zmiana hasła</asp:HyperLink>
+        </li>
+        <li>
+            <asp:LoginView ID="LoginView1" runat="server">
+                
+   <LoggedInTemplate>
+    <asp:LoginStatus ID="LoginStatus" LogoutAction="RedirectToLoginPage" runat="server" OnLoggedOut="LoginStatus1_LoggedOut" /> <asp:LoginName ID="ctlUserName" Runat="server" />
+   </LoggedInTemplate>
+</asp:LoginView>
+        </li>
+            </ul>
+        </div>
+	  </div>
+
+      <!-- A.3 HEADER BREADCRUMBS -->
+
+      <!-- Breadcrumbs -->
+      <div class="header-breadcrumbs">
+        <span style="float:left; width:560px; list-style:none; padding:0 0 0 15px; font-family:verdana,arial,sans-serif;">
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="verdana,arial,sans-serif" 
+              PathSeparator=" : " Font-Size="120%">
+                <PathSeparatorStyle Font-Bold="True" ForeColor="#5D7B9D" />
+                <CurrentNodeStyle ForeColor="#333333" />
+                <NodeStyle Font-Bold="True" ForeColor="#7C6F57" />
+                <RootNodeStyle Font-Bold="True" ForeColor="#5D7B9D" />
+            </asp:SiteMapPath>
+        </span>
+        
+      </div>
+    </div>
+        <asp:ContentPlaceHolder id="AdminContentPlaceHolder" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    
+    </form>
+</body>
+</html>

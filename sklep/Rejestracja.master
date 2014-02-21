@@ -1,0 +1,7 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/SiteMasterPage.master" AutoEventWireup="true" CodeFile="Rejestracja.master.cs" Inherits="Rejestracja" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="SiteContentPlaceHolder" Runat="Server">
+</asp:Content>
+

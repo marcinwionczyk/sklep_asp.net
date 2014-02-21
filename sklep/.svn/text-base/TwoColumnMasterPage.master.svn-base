@@ -1,0 +1,112 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="TwoColumnMasterPage.master.cs" Inherits="TwoColumnMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang ="pl">
+<head runat="server">
+    <link href="css/header4_setup.css" rel="stylesheet" type="text/css" />
+    <title>ElSiKo s.c. - Elektronika, Sieci, Komputery</title>
+    <link href="css/layout2_setup.css" rel="stylesheet" type="text/css" />
+    <link href="css/layout2_mytext.css" rel="stylesheet" type="text/css" />
+</head>
+    <body>
+    <form id="form1" runat="server">
+    <div class="page-container">
+    <!-- A. HEADER -->      
+    <div class="header">
+      
+      <!-- A.1 HEADER MIDDLE -->
+      <div class="header-middle">    
+   
+        <!-- Sitelogo and sitename
+        <a class="sitelogo" href="#" title="Go to Start page"></a>
+         -->
+        <div class="sitename">
+          <h1>ElSiKo</h1>
+          <h2>Elektronika, Sieci, Komputery</h2>
+        </div>
+      </div>
+      
+      <!-- A.2 HEADER BOTTOM -->
+      <div class="header-bottom">
+      
+        <!-- Navigation Level 2 (Drop-down menus) -->
+        <div class="nav2">
+	
+          <!-- Navigation item -->
+          <ul>
+            <li><a href="Default.aspx">Strona startowa</a></li>
+          </ul>
+          <ul>
+            <li><a href="Regulamin.aspx">Regulamin</a></li>
+          </ul>
+          <ul><li><a href="Ofirmie.aspx">O Firmie</a></li></ul>
+          
+          <!-- Navigation item -->
+          
+
+          <!-- Navigation item -->
+        </div>
+        <div class="nav0">
+        <ul>
+            <asp:LoginView ID="LoginView1" runat="server">
+            <AnonymousTemplate> </AnonymousTemplate>
+            <LoggedInTemplate>
+            U¿ytkownik: <asp:LoginName ID="LoginName1" runat="server" />
+            <asp:LoginStatus ID="LoginStatus" LogoutPageUrl="Default.aspx" runat="server" OnLoggedOut="LoginStatus1_LoggedOut" /> 
+               
+            </LoggedInTemplate>
+            </asp:LoginView>
+            
+            </ul>
+        </div>
+	  </div>
+
+      <!-- A.3 HEADER BREADCRUMBS -->
+
+      <!-- Breadcrumbs -->
+      <div class="header-breadcrumbs">
+        <span style="float:left; width:560px; list-style:none; padding:0 0 0 15px; font-family:verdana,arial,sans-serif;">
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="verdana,arial,sans-serif" 
+              PathSeparator=" : " Font-Size="120%">
+                <PathSeparatorStyle Font-Bold="True" ForeColor="#5D7B9D" />
+                <CurrentNodeStyle ForeColor="#333333" />
+                <NodeStyle Font-Bold="True" ForeColor="#7C6F57" />
+                <RootNodeStyle Font-Bold="True" ForeColor="#5D7B9D" />
+            </asp:SiteMapPath>
+        </span>
+      </div>
+    </div>
+    <!-- MAIN SECTION -->
+    <div class="main">
+ 
+      <!-- B.1 MAIN NAVIGATION -->
+      <div class="main-navigation">
+
+        <!-- Navigation Level 3 -->
+        <div class="round-border-topright"></div>
+          <asp:ContentPlaceHolder ID="NavigationContentPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+      </div>
+ 
+      <!-- B.1 MAIN CONTENT -->
+      <div class="main-content">
+          
+    <asp:ContentPlaceHolder ID="TwoColumnContentPlaceHolder" runat="server">
+
+    </asp:ContentPlaceHolder>
+    </div>
+    </div>
+    
+  <!-- C. FOOTER AREA -->      
+
+    <div class="footer">
+
+      <p>Copyright &copy; 2009 ElSiKo | All Rights Reserved</p>
+      <p class="credits">Design by <a href="http://www.1-2-3-4.info/" title="Strona Projektanta">Wolfgang</a> | Modified by <a href="http://www.marcinwionczyk.info" title="Strina domowa osoby modyfikuj¹cej">Marcin Wionczyk</a> | <a href="http://validator.w3.org/check?uri=referer" title="Validate XHTML code"> XHTML 1.0</a> | <a href="http://jigsaw.w3.org/css-validator/" title="Validate CSS code">CSS 2.0</a></p>
+
+    </div>      
+    </div>
+    </form>
+    </body>
+</html>

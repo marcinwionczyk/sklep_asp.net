@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/SiteMasterPage.master" AutoEventWireup="true" CodeFile="1ColumnMasterPage.master.cs" Inherits="_1ColumnMasterPage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<link href="css/layout1_setup.css" rel="stylesheet" type="text/css" />
+<link href="css/layout1_text.css" rel="stylesheet" type="text/css" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="SiteContentPlaceHolder" Runat="Server">
+ <div class="main">
+      <!-- B.1 MAIN CONTENT -->
+      <div class="main-content">
+
+        <!-- Content unit - One column -->
+        <div class="column1-unit">
+    <asp:ContentPlaceHolder ID="SingleColumnContentPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+    </div>
+    </div>
+    </div>
+     <!-- C. FOOTER AREA -->      
+
+    <div class="footer">
+
+      <p>Copyright &copy; 2009 ElSiKo | All Rights Reserved</p>
+      <p class="credits">Design by <a href="http://www.1-2-3-4.info/" title="Designer Homepage">Wolfgang</a>  | Modified by <a href="http://www.marcinwionczyk.info" title="Modifyer Homepage">Marcin Wionczyk</a> | <a href="http://validator.w3.org/check?uri=referer" title="Validate XHTML code"> XHTML 1.0</a> | <a href="http://jigsaw.w3.org/css-validator/" title="Validate CSS code">CSS 2.0</a></p>
+
+    </div>      
+</asp:Content>
+

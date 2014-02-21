@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="Default.aspx" title="Strona startowa"  description="Strona początkowa">
+      <siteMapNode url="logged.aspx" title="Panel użytkownika" description="strona po zalogowaniu" />
+        <siteMapNode url="Regulamin.aspx" title="Regulamin"  description="Regulamin sklepu" />
+        <siteMapNode url="OFirmie.aspx" title="O Firmie"  description="Dane kontaktowe, Historia" />
+      <siteMapNode url="Rejestracja.aspx" title="Rejestracja" description="Rejestracja nowego użytkownika" />
+    </siteMapNode>
+</siteMap>
